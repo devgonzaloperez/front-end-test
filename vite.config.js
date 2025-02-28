@@ -10,10 +10,11 @@ export default defineConfig({
             eslint: {
                 useFlatConfig: true,
                 lintCommand: "eslint ./src/**/*.{js,jsx}", 
-                dev: {
-                    logLevel: ['error']
-                }
+                dev: {logLevel: ['error']}
             }
         })
-    ]
+    ],
+    server: {
+        port: 3000,
+    }
 });
