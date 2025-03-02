@@ -39,7 +39,7 @@ Ejecuta los tests llevados a cabo con **Jest** y **React Testing Library**.
 - **Vite**: Herramienta de compilación y desarrollo rápida.
 - **ESLint**: Linter para mantener un código limpio y consistente.
 
-## 4. Instalación Entorno de Desarrollo
+## 3. Instalación Entorno de Desarrollo
 1. Clonar el repositorio.
    ```
    git clone https://github.com/tu-usuario/front-end-test.git
@@ -54,7 +54,7 @@ Ejecuta los tests llevados a cabo con **Jest** y **React Testing Library**.
    npm start
    ```
 
-## 3. Rutas de la Aplicación
+## 4. Rutas de la Aplicación
 
 ### `/products`
 
