@@ -15,15 +15,12 @@ export const ProductListPage = () => {
         setSearch(e.target.value);
     };
 
-    // Memoize filtered products
     const filteredProducts = useMemo(() => {
         return (products || []).filter((product) => 
             product.brand.toLowerCase().includes(debouncedSearch.toLowerCase()) 
             || product.model.toLowerCase().includes(debouncedSearch.toLowerCase())
         );
     }, [products, debouncedSearch]);
-
-    console.log({products, filteredProducts})
 
     return (
         <>
@@ -46,13 +43,26 @@ export const ProductListPage = () => {
                             }
                         }}
                         autoFocus
-                        sx={{width: "100%"}}
+                        sx={{
+                            width: "100%",
+                            "& .MuiOutlinedInput-root": {
+                                "& fieldset": {
+                                  border: "1px solid lightgrey",
+                                },
+                                "&.Mui-focused fieldset": {
+                                  border: "1px solid lightgrey",
+                                },
+                                "&:hover fieldset": {
+                                  border: "1px solid lightgrey",
+                                },
+                              },
+                        }}
                     />
                 </Grid>
             </Grid>
             {
                 (areProductsLoading)
-                    ? <SkeletonGrid />
+                    ? <SkeletonGrid/>
                     : (error)
                         ? <ErrorMessage />
                         : <ProductGrid products={filteredProducts}/>

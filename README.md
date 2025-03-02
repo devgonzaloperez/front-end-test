@@ -1,12 +1,76 @@
-# React + Vite
+# Front-End Test - E-commerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+El proyecto es una prueba técnica frontend. Se trata de un e-commerce de dos páginas, desarrollado con **React** con **Vite**.
 
-Currently, two official plugins are available:
+## 1. Scripts Disponibles
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Desde la raíz del proyecto, se pueden ejecutar los scripts que se pueden observar a continuación.
 
-## Expanding the ESLint configuration
+### `npm start`
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Inicia el servidor de desarrollo en `http://localhost:3000` utilizando **Vite**.
+
+### `npm run build`
+
+Genera la versión de producción en la carpeta `dist`.
+
+### `npm run preview`
+
+Ejecuta una versión pre-compilada de la aplicación en un servidor local.
+
+### `npm run lint`
+
+Ejecuta **ESLint** para analizar y corregir errores en el código.
+
+### `npm run test`
+
+Ejecuta los tests llevados a cabo con **Jest** y **React Testing Library**.
+
+## 2. Tecnologías y Librerías Utilizadas
+
+### Dependencias principales
+
+- **React 19**: Biblioteca para construir la interfaz de usuario.
+- **React Router 7**: Manejo de rutas dentro de la aplicación.
+- **Material UI**: Componentes utilizados para la creación de la UI.
+
+### Dependencias de desarrollo
+
+- **Vite**: Herramienta de compilación y desarrollo rápida.
+- **ESLint**: Linter para mantener un código limpio y consistente.
+
+## 4. Instalación Entorno de Desarrollo
+1. Clonar el repositorio.
+   ```
+   git clone https://github.com/tu-usuario/front-end-test.git
+   cd front-end-test
+   ```
+2. Instalar dependencias.
+   ```
+   npm install
+   ```
+3. Iniciar el entorno de desarrollo:
+   ```
+   npm start
+   ```
+
+## 3. Rutas de la Aplicación
+
+### `/products`
+
+Página principal donde se listan los productos disponibles.
+
+### `/products/:brand-name/:id`
+
+Página de detalles de un producto específico.
+
+## 5. Construcción para Producción
+
+Para generar los archivos optimizados para producción, se debe ejecutar el siguiente comando.
+
+```sh
+npm run build
+```
+
+Esto generará la carpeta `dist/` con los archivos listos para desplegar en un servidor.
+

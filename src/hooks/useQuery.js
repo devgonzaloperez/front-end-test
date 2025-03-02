@@ -26,6 +26,12 @@ export const useQuery = ({path, cache = true}) => {
             
             console.log("Data from API");
             const response = await fetch(completeUrl);
+
+            if(!response.ok){
+                const errorData = await response.json();
+                throw new Error(errorData.message || 'Error en la petición');
+            }
+            
             const data = await response.json();
             setData(data);
             const expirationDate = Date.now() + 1000 * 60 * 60;
