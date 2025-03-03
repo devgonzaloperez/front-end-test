@@ -47,7 +47,7 @@ export const useQuery = ({path, cache = true}) => {
 
     useEffect(() => {
         fetchData();
-    }, [completeUrl]);
+    }, []);
 
     return {
         isLoading,
