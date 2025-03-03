@@ -1,76 +1,97 @@
-# Front-End Test - E-commerce
 
-El proyecto es una prueba técnica frontend. Se trata de un e-commerce de dos páginas, desarrollado con **React** con **Vite**.
+# Front-End Test
 
-## 1. Scripts Disponibles
+## Descripción
 
-Desde la raíz del proyecto, se pueden ejecutar los scripts que se pueden observar a continuación.
+Este proyecto es una prueba técnica de front end que consiste en un e-commerce de dos páginas, desarrollado utilizando **React**, **Jest** y **Cypress**.
 
-### `npm start`
+## Instalación
 
-Inicia el servidor de desarrollo en `http://localhost:3000` utilizando **Vite**.
+Para configurar este proyecto en tu entorno local, sigue los pasos a continuación:
 
-### `npm run build`
-
-Genera la versión de producción en la carpeta `dist`.
-
-### `npm run preview`
-
-Ejecuta una versión pre-compilada de la aplicación en un servidor local.
-
-### `npm run lint`
-
-Ejecuta **ESLint** para analizar y corregir errores en el código.
-
-### `npm run test`
-
-Ejecuta los tests llevados a cabo con **Jest** y **React Testing Library**.
-
-## 2. Tecnologías y Librerías Utilizadas
-
-### Dependencias principales
-
-- **React 19**: Biblioteca para construir la interfaz de usuario.
-- **React Router 7**: Manejo de rutas dentro de la aplicación.
-- **Material UI**: Componentes utilizados para la creación de la UI.
-
-### Dependencias de desarrollo
-
-- **Vite**: Herramienta de compilación y desarrollo rápida.
-- **ESLint**: Linter para mantener un código limpio y consistente.
-
-## 3. Instalación Entorno de Desarrollo
-1. Clonar el repositorio.
-   ```
-   git clone https://github.com/tu-usuario/front-end-test.git
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/devgonzaloperez/front-end-test
    cd front-end-test
    ```
-2. Instalar dependencias.
-   ```
+
+2. Instala las dependencias:
+   ```bash
    npm install
    ```
-3. Iniciar el entorno de desarrollo:
+
+3. Crea un archivo `.env` basado en el archivo `env.example` y completa la variable `VITE_API_BASE_URL` con la URL base de la API que tu aplicación necesitará para funcionar. Ejemplo:
+   ```env
+   VITE_API_BASE_URL=https://api.tu-ecommerce.com
    ```
-   npm start
-   ```
 
-## 4. Rutas de la Aplicación
+## Scripts
 
-### `/products`
+Este proyecto incluye varios scripts para facilitar el desarrollo y la ejecución de tareas. A continuación se describen los scripts disponibles:
 
-Página principal donde se listan los productos disponibles.
+- `start`: Inicia el servidor de desarrollo con Vite.
+  ```bash
+  npm start
+  ```
 
-### `/products/:brand-name/:id`
+- `build`: Genera los archivos optimizados para producción.
+  ```bash
+  npm run build
+  ```
 
-Página de detalles de un producto específico.
+- `lint`: Ejecuta ESLint para comprobar el código fuente en busca de problemas de estilo y calidad.
+  ```bash
+  npm run lint
+  ```
 
-## 5. Construcción para Producción
+- `test`: Ejecuta las pruebas con Jest.
+  ```bash
+  npm test
+  ```
 
-Para generar los archivos optimizados para producción, se debe ejecutar el siguiente comando.
+- `test:watch`: Ejecuta Jest en modo "watch", donde se ejecutan las pruebas automáticamente al realizar cambios.
+  ```bash
+  npm run test:watch
+  ```
 
-```sh
-npm run build
-```
+- `test:watch:coverage`: Ejecuta las pruebas con cobertura en modo "watch".
+  ```bash
+  npm run test:watch:coverage
+  ```
 
-Esto generará la carpeta `dist/` con los archivos listos para desplegar en un servidor.
+- `cypress`: Abre la interfaz de Cypress para pruebas end-to-end.
+  ```bash
+  npm run cypress
+  ```
+
+- `test:cypress`: Ejecuta las pruebas de Cypress.
+  ```bash
+  npm run test:cypress
+  ```
+
+- `preview`: Previsualiza la aplicación construida en un entorno de producción.
+  ```bash
+  npm run preview
+  ```
+
+## Dependencias
+
+Este proyecto utiliza las siguientes dependencias:
+
+### Producción:
+- **@emotion/react** y **@emotion/styled**: Bibliotecas para gestionar estilos en React utilizando CSS-in-JS.
+- **@fontsource/roboto**: Fuente Roboto para el diseño.
+- **@mui/icons-material** y **@mui/material**: Material UI para la construcción de interfaces de usuario.
+- **react**, **react-dom**: La biblioteca de React y su renderizador para la creación de interfaces de usuario.
+- **react-router**: Manejo de rutas en la aplicación.
+- **react-window**: Para la renderización eficiente de listas grandes.
+
+### Desarrollo:
+- **@babel/preset-env** y **@babel/preset-react**: Configuración de Babel para transpilar código JavaScript y JSX.
+- **@eslint/js** y varios plugins de ESLint: Para mantener la calidad y estilo del código.
+- **jest**, **babel-jest**: Herramientas para realizar pruebas unitarias.
+- **cypress**: Herramienta para pruebas end-to-end.
+- **vite**: Herramienta de construcción y desarrollo rápida.
+- **vite-plugin-checker**: Para comprobar la calidad del código durante el desarrollo.
+
 
