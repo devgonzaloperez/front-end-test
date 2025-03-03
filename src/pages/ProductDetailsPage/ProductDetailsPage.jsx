@@ -51,8 +51,10 @@ export const ProductDetailsPage = () => {
         }
     });
 
+    const isProductAvailable = !!product?.price && product?.options?.colors?.length > 0 && product?.options?.storages?.length > 0;
+
     const handleAddButtonClick = () => {
-        if(!product?.price){ 
+        if(!isProductAvailable){ 
             setSnackbarText(`El producto ${product?.brand} ${product?.model} no se encuentra disponible.`);
             return;
         };
@@ -80,7 +82,7 @@ export const ProductDetailsPage = () => {
                     <Box sx={styles.titleContainer}>
                         {(isProductLoading) 
                             ? <Skeleton variant="rounded" sx={styles.chipSkeleton}/>
-                            : <Chip label={(product?.price ? "DISPONIBLE" : "NO DISPONIBLE")} sx={styles.chip}/>
+                            : <Chip label={(isProductAvailable) ? "DISPONIBLE" : "NO DISPONIBLE"} sx={styles.chip}/>
                         }
                         {(isProductLoading) 
                             ? <Skeleton variant="rounded" sx={styles.titleSkeleton}/>

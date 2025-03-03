@@ -17,7 +17,7 @@ export const OptionSelector = ({options, selected, select}) => {
                         }}
                         onClick={() => select(option.code)} 
                     >
-                        {option.name}
+                        {option?.name?.trim() || "-"}
                     </Button>
                 ))
             }
