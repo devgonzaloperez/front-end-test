@@ -18,13 +18,11 @@ export const useQuery = ({path, cache = true}) => {
                 const cachedData = readLocalStorageItem(completeUrl);
                 const isCachedDataExpired = !!cachedData && !!(cachedData.expirationDate < Date.now());
                 if(cachedData && !isCachedDataExpired){
-                    console.log("Data from cache");
                     setData(cachedData.data);
                     return;
                 }
             }
             
-            console.log("Data from API");
             const response = await fetch(completeUrl);
 
             if(!response.ok){
