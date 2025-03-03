@@ -21,7 +21,7 @@ export const ProductListPage = () => {
             || product.model.toLowerCase().includes(debouncedSearch.toLowerCase())
         );
     }, [products, debouncedSearch]);
-
+    
     return (
         <>
             <Grid container spacing={2} sx={{mb: 4, display: "flex", alignItems: "center", justifyContent: "end"}}>

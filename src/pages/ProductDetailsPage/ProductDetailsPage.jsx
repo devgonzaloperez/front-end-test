@@ -161,7 +161,7 @@ export const ProductDetailsPage = () => {
                             ? <Skeleton variant="rounded" sx={{height: "48px", width: "50%"}}/> 
                             : <Button 
                                 variant="contained" 
-                                sx={{width: {xs: "100%", md: "50%", lg: "30%"}, minWidth: "160px", height: "48px", backgroundColor: "#000000DE", "&:hover": {backgroundColor: "#000000DE"}} 
+                                sx={{width: {xs: "100%", md: "75%", lg: "calc(100%/3)", xl: "25%"}, minWidth: "160px", height: "48px", backgroundColor: "#000000DE", "&:hover": {backgroundColor: "#000000DE"}} 
                                 } 
                                 disabled={isAddToCartLoading} 
                                 onClick={handleAddButtonClick}
