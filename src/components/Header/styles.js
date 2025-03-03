@@ -1,7 +1,7 @@
 export const styles = {
     container: {
         display: "flex", 
-        marginBottom: "48px", 
+        marginBottom: "24px", 
         justifyContent: "space-between", 
         alignItems: "center",
     },

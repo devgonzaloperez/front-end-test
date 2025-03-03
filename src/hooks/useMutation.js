@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const useMutation = ({ path, method, onSuccess, onError}) => {
+export const useMutation = ({path, method, onSuccess, onError}) => {
 
     const [isLoading, setIsLoading] = useState(false);
   

@@ -1,7 +1,7 @@
 import { Box, Rating, Skeleton, Typography } from '@mui/material'
 import React, { useMemo, useState } from 'react'
 import { useNavigate } from 'react-router';
-import { generateRandomNumber } from '../../utils/generateRandomNumber';
+import { generateRandomNumberFromString } from '../../utils/generateRandomNumberFromString';
 import { styles } from './styles';
 
 export const ProductCard = ({isSkeleton, product}) => {
@@ -9,8 +9,8 @@ export const ProductCard = ({isSkeleton, product}) => {
     const [isImageLoaded, setIsImageLoaded] = useState(!!product?.imgUrl);
     const navigate = useNavigate();
 
-    const rating = useMemo(() => generateRandomNumber(3, 5), []);
-    const ratingQuantity = useMemo(() => generateRandomNumber(10, 100), []);
+    const rating = useMemo(() => generateRandomNumberFromString(3, 5, product?.model), []);
+    const ratingQuantity = useMemo(() => generateRandomNumberFromString(10, 100, product?.model), []);
 
     const handleCardClick = () => {
         navigate(`/products/${product.brand.replaceAll(" ", "-").toLowerCase()}-${product.model.replaceAll(" ", "-").toLowerCase()}/${product.id}`);

@@ -1,6 +1,6 @@
 export const styles = {
     container: {
-        mb: 4, 
+        mb: {xs: 2, sm: 4}, 
         display: "flex", 
         alignItems: "center", 
         justifyContent: "end" 
