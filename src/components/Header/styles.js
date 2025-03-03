@@ -2,9 +2,8 @@ export const styles = {
     container: {
         display: "flex", 
         marginBottom: "48px", 
-        background: "rgba(255, 255, 255, 0.1)", 
         justifyContent: "space-between", 
-        alignItems: "center"
+        alignItems: "center",
     },
     logoContainer: {
         display: "flex", 

@@ -3,6 +3,7 @@ import { useCartContext } from "../../hooks/useCartContext";
 import { Box, Typography } from "@mui/material";
 import { LocalMallRounded, PhoneIphoneRounded } from "@mui/icons-material";
 import { styles } from "./styles";
+import logo from '/images/logo.png';
 
 export const Header = () => {
 
@@ -16,7 +17,7 @@ export const Header = () => {
         <Box style={styles.container}>
 
             <Box sx={styles.logoContainer} onClick={handleLogoClick}>
-                <PhoneIphoneRounded/>
+                <img src={logo} alt="INDITEL Logo" style={{height: "40px"}}/>
                 <Typography sx={styles.logoText}>INDITEL</Typography>
             </Box>
 
