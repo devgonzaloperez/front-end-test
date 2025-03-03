@@ -7,6 +7,7 @@ import { useMutation } from "../../hooks/useMutation";
 import { useCartContext } from "../../hooks/useCartContext";
 import { styles } from "./styles";
 import { OptionSelector } from "../../components/OptionSelector/OptionSelector";
+import { ErrorMessage } from "../../components/ErrorMessage/ErrorMessage";
 
 export const ProductDetailsPage = () => {
 
@@ -16,7 +17,7 @@ export const ProductDetailsPage = () => {
     const cleanSnackbarText = () => setSnackbarText("");
     const { productId } = useParams();
 
-    const {isLoading: isProductLoading, data: product} = useQuery({path: `product/${productId}`, cache: true});
+    const {isLoading: isProductLoading, error: productError, data: product} = useQuery({path: `product/${productId}`, cache: true});
 
     useEffect(() => {
         if(product){
@@ -57,6 +58,8 @@ export const ProductDetailsPage = () => {
         };
         mutate({"id": productId, "colorCode": selectedOptions.colorCode, "storageCode": selectedOptions.storageCode});
     };
+
+    if(productError) return <ErrorMessage/>
 
     return (
         <>        

@@ -1,9 +1,25 @@
 import { ErrorRounded } from "@mui/icons-material";
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
+import { useLocation } from "react-router";
+import { styles } from "./styles";
 
-export const ErrorMessage = () => (
-    <Box sx={{height: "160px", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", color: "lightgrey"}}>
-        <ErrorRounded sx={{fontSize: "48px", mb: 1}}/>
-        <Typography sx={{textTransform: "uppercase", fontWeight: "bold"}}>Se produjo un error</Typography>
-    </Box>
-);
+export const ErrorMessage = () => {
+
+    const location = useLocation();
+
+    const refreshToHome = () => {
+        window.location.href = "/";
+    };
+
+    return(
+
+        <Box sx={styles.container}>
+            <ErrorRounded sx={styles.icon}/>
+            <Typography sx={styles.text}>Se produjo un error</Typography>
+            <Button variant="contained" sx={styles.button} onClick={refreshToHome}>
+                {location === "/" ? "Recargar" : "Volver"}
+            </Button>
+        </Box>
+    )
+
+};
