@@ -142,6 +142,7 @@ export const ProductDetailsPage = () => {
                     {(isProductLoading) 
                         ? <Skeleton variant="rounded" sx={styles.addToCartButtonSkeleton}/> 
                         : <Button 
+                            id={"add-button-test-id"}
                             variant="contained" 
                             sx={styles.addToCartButton} 
                             disabled={isAddToCartLoading} 
@@ -162,6 +163,7 @@ export const ProductDetailsPage = () => {
             </Grid>
 
             <Snackbar
+                id={"snackbar-test-id"}
                 open={!!snackbarText}
                 autoHideDuration={2000}
                 onClose={cleanSnackbarText}

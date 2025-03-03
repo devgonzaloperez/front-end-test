@@ -1,4 +1,7 @@
 module.exports = {
     testEnvironment: 'jest-environment-jsdom',
-    setupFiles: ['./jest.setup.js']
+    setupFilesAfterEnv: ['./jest.setup.js'],
+    moduleNameMapper: {
+        '\\.(jpg|jpeg|png|gif|svg)$': '<rootDir>/tests/mocks/fileMock.cjs',
+    }
 };

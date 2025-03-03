@@ -34,7 +34,7 @@ export const Breadcrumbs = () => {
         >
             {breadCrumbs.map((breadCrumb) => breadCrumb.show && 
                 <Typography 
-                    key={breadCrumb.label} 
+                    key={breadCrumb.label}
                     label={breadCrumb.label} 
                     onClick={() => navigate(breadCrumb.path)} 
                     sx={{

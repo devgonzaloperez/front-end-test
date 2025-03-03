@@ -17,7 +17,7 @@ export const ProductCard = ({isSkeleton, product}) => {
     }; 
 
     return (
-        <Box sx={styles.container} onClick={handleCardClick}>
+        <Box sx={styles.container} onClick={handleCardClick} id={(product) && "product-card-test-id"}>
             
             <Box sx={styles.imageContainer}>
                 {(isSkeleton || !isImageLoaded || !product?.imgUrl)
